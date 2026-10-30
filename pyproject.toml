@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "liverydock"
+version = "0.4.1"
+description = "Safe drag-and-drop livery installer for Microsoft Flight Simulator 2024"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "RonLogic"}]
+dependencies = ["cryptography>=46", "Pillow>=11"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pyinstaller>=6.16"]
+
+[project.urls]
+Homepage = "https://github.com/RonLogic/LiveryDock"
+Issues = "https://github.com/RonLogic/LiveryDock/issues"
+Releases = "https://github.com/RonLogic/LiveryDock/releases"
+
+[project.gui-scripts]
+liverydock = "liverydock.app:run"
+
+[tool.setuptools.packages.find]
+include = ["liverydock*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["."]

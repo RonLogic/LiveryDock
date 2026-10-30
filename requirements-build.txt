@@ -1,0 +1,10 @@
+# Direct versions used to validate and package the 0.4.1 Windows x64 release.
+# Use Python 3.12; install the project itself with --no-deps after this file.
+cryptography==50.0.2
+Pillow==13.0.0
+cffi==2.1.1
+pycparser==3.12
+pytest==9.2.0
+pyinstaller==6.22.3
+pyinstaller-hooks-contrib==2026.9
+setuptools==84.2.1
